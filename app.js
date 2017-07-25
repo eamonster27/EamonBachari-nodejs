@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const fs = require("fs");
 const expressValidator = require("express-validator");
 const words = fs.readFileSync("/usr/share/dict/words", "utf-8").toLowerCase().split("\n");
+const port = process.env.PORT || 3000;
+app.listen(port);
 
 var randomWord;
 var remainingGuesses;
@@ -23,10 +25,6 @@ app.set('view engine', 'mustache');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(expressValidator());
-
-app.listen(3000, function(){
-  console.log("SERVER RUNNING ON: http://0.0.0.0:3000")
-})
 
 initializeGame(words);
 
