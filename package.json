@@ -8,7 +8,8 @@
     "express": "^4.15.3",
     "express-validator": "^3.2.1",
     "fs": "0.0.1-security",
-    "mustache-express": "^1.2.5"
+    "mustache-express": "^1.2.5",
+    "serve-favicon": "^2.4.3"
   },
   "devDependencies": {},
   "scripts": {

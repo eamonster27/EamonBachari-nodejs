@@ -4,6 +4,9 @@ const mustache = require("mustache-express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const expressValidator = require("express-validator");
+const favicon = require('serve-favicon');
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
+
 const words = fs.readFileSync("words.txt", "utf-8").toLowerCase().split("\n");
 const port = process.env.PORT || 3000;
 app.listen(port);
