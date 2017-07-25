@@ -4,7 +4,7 @@ const mustache = require("mustache-express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const expressValidator = require("express-validator");
-const words = fs.readFileSync("/usr/share/dict/words", "utf-8").toLowerCase().split("\n");
+const words = fs.readFileSync("words.txt", "utf-8").toLowerCase().split("\n");
 const port = process.env.PORT || 3000;
 app.listen(port);
 
